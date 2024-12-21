@@ -17,6 +17,7 @@ sudo npm install -g pnpm
 
 sudo yum install -y pnpm
 sudo curl -fsSL https://get.pnpm.io/install.sh | sh -
+export PATH="$HOME/.local/share/pnpm:$HOME/.local/share/pnpm/global/node_modules/.bin:$PATH"
 
 # Initialize the app
 npm init saas-boilerplate myapp3
