@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update package lists
-# sudo apt update
+sudo yum update -y
 
 # Install Docker
 sudo yum install -y docker
@@ -9,18 +9,15 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 # Install Node.js
-# curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install -y nodejs
+curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
+sudo yum install -y nodejs
 
 # Install PNPM
-sudo npm install -g pnpm
-
-sudo yum install -y pnpm
-sudo curl -fsSL https://get.pnpm.io/install.sh | sh -
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 export PATH="$HOME/.local/share/pnpm:$HOME/.local/share/pnpm/global/node_modules/.bin:$PATH"
 
-sudo pnpm --version
-
+# Verify PNPM installation
+pnpm --version || { echo "PNPM installation failed"; exit 1; }
 
 # Initialize the app
-npm init saas-boilerplate myapp3 --skipSystemCheck
+npx create-saas-boilerplate myapp3 --skipSystemCheck
