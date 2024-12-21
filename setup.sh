@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update package lists
-sudo apt update
+# sudo apt update
 
 # Install Docker
 sudo sudo yum install -y docker
@@ -13,7 +13,7 @@ sudo systemctl enable docker
 sudo apt install -y nodejs
 
 # Install PNPM
-npm install -g pnpm
+sudo npm install -g pnpm && pnpm install && pnpm build
 
 # Initialize the app
 npm init saas-boilerplate myapp3
