@@ -13,7 +13,7 @@ sudo systemctl enable docker
 sudo apt install -y nodejs
 
 # Install PNPM
-sudo npm install -g pnpm && pnpm install && pnpm build
+sudo npm install pnpm && pnpm install && pnpm build
 
 # Initialize the app
 npm init saas-boilerplate myapp3
