@@ -19,5 +19,8 @@ sudo yum install -y pnpm
 sudo curl -fsSL https://get.pnpm.io/install.sh | sh -
 export PATH="$HOME/.local/share/pnpm:$HOME/.local/share/pnpm/global/node_modules/.bin:$PATH"
 
+sudo pnpm --version
+
+
 # Initialize the app
-npm init saas-boilerplate myapp3
+npm init saas-boilerplate myapp3 --skipSystemCheck
