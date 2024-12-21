@@ -13,8 +13,10 @@ sudo systemctl enable docker
 sudo apt install -y nodejs
 
 # Install PNPM
+sudo npm install -g pnpm
+
 sudo yum install -y pnpm
-#curl -fsSL https://get.pnpm.io/install.sh | sh -
+sudo curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # Initialize the app
 npm init saas-boilerplate myapp3
